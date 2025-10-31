@@ -1,6 +1,7 @@
 public class Particle {
   private double x, y, speed, angle;
   private int rgb, size;
+  
   public Particle() {
     x = y = 200;
     speed = random(1, 4);
@@ -10,8 +11,8 @@ public class Particle {
   }
   
   public double random(double lowerBound, double upperBound) {
-    return (Math.random()*(upperBound-lowerBound+1)) + lowerBound;
-}
+    return (Math.random()*(upperBound-lowerBound)) + lowerBound;
+  }
   
   public double getX() {
     return x;
@@ -21,12 +22,12 @@ public class Particle {
     return y;
   }
   
-  public double getSpeed() {
-    return speed;
-  }
-  
   public int getSize() {
     return size;
+  }
+  
+  public double getSpeed() {
+    return speed;
   }
   
   public int getColor() {
